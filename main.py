@@ -430,10 +430,10 @@ def ubah_data(masukan):
             mobil = mobil_list[i]
             if pilihan == mobil["id_mobil"].lower():
                 print("Masukkan data yang baru, kosongkan jika tidak ingin mengubah data")
-                merk_baru = input(f"Merk saat ini ({mobil["merk"]}): ").strip().lower()
-                tipe_baru = input(f"Tipe saat ini ({mobil["tipe"]}): ").strip().lower()
-                tahun_input = input(f"Tahun saat ini ({mobil["tahun"]}): ").strip()
-                harga_input = input(f"Harga saat ini ({mobil["harga"]}): ").strip()
+                merk_baru = input(f"Merk saat ini ({mobil['merk']}): ").strip().lower()
+                tipe_baru = input(f"Tipe saat ini ({mobil['tipe']}): ").strip().lower()
+                tahun_input = input(f"Tahun saat ini ({mobil['tahun']}): ").strip()
+                harga_input = input(f"Harga saat ini ({mobil['harga']}): ").strip()
                 konfirmasi = konfirmasi_ya_tidak("apakah anda yakin ingin mengubah data tersebut? y/n: ".title())
                 if konfirmasi == "y":
                     tahun_baru = int(tahun_input) if tahun_input.isdigit() else mobil["tahun"]
@@ -459,9 +459,9 @@ def ubah_data(masukan):
         for i in range(len(pelanggan_list)):
             pelanggan = pelanggan_list[i]
             if pilihan == pelanggan["id_pelanggan"].strip().lower():
-                nama_baru = input(f"Nama ({pelanggan["nama"]}): ").strip().lower()
-                kelamin_baru = input(f"Kelamin ({pelanggan["kelamin"]}): ").strip().lower()
-                alamat_baru = input(f"Alamat ({pelanggan["alamat"]}): ").strip().lower()
+                nama_baru = input(f"Nama ({pelanggan['nama']}): ").strip().lower()
+                kelamin_baru = input(f"Kelamin ({pelanggan['kelamin']}): ").strip().lower()
+                alamat_baru = input(f"Alamat ({pelanggan['alamat']}): ").strip().lower()
                 konfirmasi = konfirmasi_ya_tidak("apakah anda yakin ingin mengubah data tersebut? y/n: ".title())
                 if konfirmasi == "y":
                     if nama_baru:
